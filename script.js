@@ -144,7 +144,7 @@ function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
 
 
-  //dont think i added the right code or did this right, but its worth a try at least. ill just leave it here
+  //dont think i added the right code or even did this right, but its worth a try at least. ill just leave it here
   let newToDoItem = {
     id: todoItems.length,
     text: "crysomemore",
@@ -159,7 +159,8 @@ function clearCompletedTasks() {
     }
   }
   }
-
+  
+ 
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
