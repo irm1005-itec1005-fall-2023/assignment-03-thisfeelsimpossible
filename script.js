@@ -137,15 +137,28 @@ function deleteToDoItem(todoId) {
 }
 
 // Function to clear all completed tasks
+let newToDoItems = [];
 // Loop through the array of todos, and when you find a todo item that is marked
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
 
+
+  //dont think i added the right code or did this right, but its worth a try at least. ill just leave it here
+  let newToDoItem = {
+    id: todoItems.length,
+    text: "crysomemore",
+    completed: false
+  };
+  todoItems.push(newToDoItem);
   
-
-
-
+  function markToDoItemAsCompleted(todoId) {
+    for (let i = 0; i < newToDoItem.length; i++) {
+      if (newToDoItem[i].id === todoId) {
+        newToDoItem[i].completed = true;
+    }
+  }
+  }
 
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
