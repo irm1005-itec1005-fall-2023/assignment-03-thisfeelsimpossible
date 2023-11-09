@@ -60,14 +60,16 @@ let todoItems = [];
 function addToDoItem(text) {
 
   let todoItem = {
-    id: todoItems.length,
-    text: "cry",
-    completed: false,
-  };
-  
+   id: todoItems.length,
+   text: text,
+   completed: false,
+ };
 
-  todoItems.push(todoItem);
+
+todoItems.push(todoItem);
       
+
+  
 
   //console.log(addToDoItems);  // Remove this line when you start working on the function
   }
@@ -146,9 +148,9 @@ function clearCompletedTasks() {
 
   //dont think i added the right code or even did this right, but its worth a try at least. ill just leave it here
   let newToDoItem = {
-    id: todoItems.length,
-    text: "crysomemore",
-    completed: false
+    id: newToDoItems.length,
+    text: text,
+    completed: false,
   };
   todoItems.push(newToDoItem);
   
