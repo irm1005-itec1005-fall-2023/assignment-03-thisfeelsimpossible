@@ -56,17 +56,19 @@ let todoItems = [];
 // It's really important that you have a unique ID for each todo item that you push onto the array
 // the function does not need to return anything
 
+let counter = 0;
 
 function addToDoItem(text) {
 
   let todoItem = {
-   id: todoItems.length,
+   id: counter,
    text: text,
    completed: false,
  };
 
-
+counter++;
 todoItems.push(todoItem);
+
       
 
   
@@ -82,17 +84,19 @@ todoItems.push(todoItem);
 // Loop through the array of todos, and when you find the todo item with the id
 // that matches the id passed to the function, remove it from the array
 // the function does not need to return anything
+
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
 
-  for(let i=0; i < todoItems.length; i++)  {
-//console.log(todoItems[i].text,todoItems[i].id)
-if(todoItems[i].id === todoId){
-  console.log("found",todoItems[i].text,todoItems[i].id)
-  todoItems.splice(i, 1);
-}
-  }
-
+  for(let i=0; i < counter; i++)  {
+    //console.log(todoItems[i].text,todoItems[i].id)
+    if(todoItems[i].id === todoId){
+      console.log("found",todoItems[i].text,todoItems[i].id)
+      todoItems.splice(i, 1);
+      counter--;
+    }
+      }
+      
 
  // console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
@@ -106,14 +110,14 @@ function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
 
 
-  for(let i=0; i < todoItems.length; i++)  {
+  for(let i=0; i < counter; i++)  {
 //console.log(todoItems[i].text,todoItems[i].id)
 if(todoItems[i].id === todoId){
   console.log("found",todoItems[i].text,todoItems[i].id)
   todoItems[i].completed = true;
-
 }
   }
+  
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
@@ -127,13 +131,15 @@ if(todoItems[i].id === todoId){
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
 
-  for(let i=0; i < todoItems.length; i++)  {
+  for(let i=0; i < counter; i++)  {
     //console.log(todoItems[i].text,todoItems[i].id)
     if(todoItems[i].id === todoId){
       console.log("found",todoItems[i].text,todoItems[i].id)
       todoItems.splice(i, 1);
+      counter--;
     }
       }
+      
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
@@ -147,21 +153,17 @@ function clearCompletedTasks() {
 
 
   //dont think i added the right code or even did this right, but its worth a try at least. ill just leave it here
-  let newToDoItem = {
-    id: newToDoItems.length,
-    text: text,
-    completed: false,
-  };
-  todoItems.push(newToDoItem);
-  
-  function markToDoItemAsCompleted(todoId) {
-    for (let i = 0; i < newToDoItem.length; i++) {
-      if (newToDoItem[i].id === todoId) {
-        newToDoItem[i].completed = true;
+  let counter = 0; 
+
+  for (let i = 0; i < counter; i++) {
+    if (todoItems[i].completed) {
+      console.log(todoItems[i].text);
+      todoItems.splice(i, 1);
+      i--; 
+      counter++; 
     }
   }
-  }
-  
+
  
 
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
