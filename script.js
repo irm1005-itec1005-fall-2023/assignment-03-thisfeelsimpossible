@@ -88,7 +88,7 @@ todoItems.push(todoItem);
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
 
-  for (let i=0; i < counter; i++)  {
+  for (let i=0; i < todoItems.length; i++)  {
     //console.log(todoItems[i].text,todoItems[i].id)
     if (todoItems[i].id === todoId){
       console.log("found",todoItems[i].text,todoItems[i].id)
@@ -110,7 +110,7 @@ function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
 
 
-  for (let i=0; i < counter; i++)  {
+  for (let i=0; i < todoItems.length; i++)  {
 //console.log(todoItems[i].text,todoItems[i].id)
 if (todoItems[i].id === todoId){
   console.log("found",todoItems[i].text,todoItems[i].id)
@@ -131,7 +131,7 @@ if (todoItems[i].id === todoId){
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
 
-  for (let i=0; i < counter; i++)  {
+  for (let i=0; i < todoItems.length; i++)  {
     //console.log(todoItems[i].text,todoItems[i].id)
     if (todoItems[i].id === todoId){
       console.log("found",todoItems[i].text,todoItems[i].id)
@@ -155,7 +155,7 @@ function clearCompletedTasks() {
   //dont think i added the right code or even did this right, but its worth a try at least. ill just leave it here
   let counter = 0; 
 
-  for (let i = 0; i < counter; i++) {
+  for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].completed) {
       console.log(todoItems[i].text);
       todoItems.splice(i, 1);
