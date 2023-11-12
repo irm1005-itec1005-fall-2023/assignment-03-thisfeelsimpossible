@@ -88,9 +88,9 @@ todoItems.push(todoItem);
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
 
-  for(let i=0; i < counter; i++)  {
+  for (let i=0; i < counter; i++)  {
     //console.log(todoItems[i].text,todoItems[i].id)
-    if(todoItems[i].id === todoId){
+    if (todoItems[i].id === todoId){
       console.log("found",todoItems[i].text,todoItems[i].id)
       todoItems.splice(i, 1);
       counter--;
@@ -110,9 +110,9 @@ function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
 
 
-  for(let i=0; i < counter; i++)  {
+  for (let i=0; i < counter; i++)  {
 //console.log(todoItems[i].text,todoItems[i].id)
-if(todoItems[i].id === todoId){
+if (todoItems[i].id === todoId){
   console.log("found",todoItems[i].text,todoItems[i].id)
   todoItems[i].completed = true;
 }
@@ -131,9 +131,9 @@ if(todoItems[i].id === todoId){
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
 
-  for(let i=0; i < counter; i++)  {
+  for (let i=0; i < counter; i++)  {
     //console.log(todoItems[i].text,todoItems[i].id)
-    if(todoItems[i].id === todoId){
+    if (todoItems[i].id === todoId){
       console.log("found",todoItems[i].text,todoItems[i].id)
       todoItems.splice(i, 1);
       counter--;
